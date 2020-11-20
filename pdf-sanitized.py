@@ -77,4 +77,4 @@ pdf_output.addPage(prev_page)
 with open(sys.argv[2], 'wb') as f:
     pdf_output.write(f)
 
-print(f'✅  Your file has been optimized at {OUTPUT_FILE}')
+print(f'✅  Your file has been sanitized at {OUTPUT_FILE}')

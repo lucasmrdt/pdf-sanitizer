@@ -1,6 +1,6 @@
 ![](./assets/preview.png)
 
-# ![](https://img.shields.io/badge/status-beta-orange) Sanatize PDF
+# ![](https://img.shields.io/badge/status-beta-orange) sanitized PDF
 
 > Quickly remove useless page from a huge pdf to get a readable pdf.
 
@@ -19,22 +19,22 @@
 ## Installation
 
 ```bash
-git clone https://github.com/lucasmrdt/sanatize-pdf
-cd sanatize-pdf
+git clone https://github.com/lucasmrdt/sanitized-pdf
+cd sanitized-pdf
 pip install -r requirements.txt --user
 ```
 
 ## Usage
 
 ```bash
-> ./sanatize-pdf input_file.pdf output_file.pdf
+> ./sanitized-pdf input_file.pdf output_file.pdf
 ```
 
 ## Example
 
 ```bash
-> ./sanatize-pdf my_huge_file.pdf my_readable_file.pdf
-✅  Your file has been optimized at my_readable_file.pdf
+> ./sanitized-pdf my_huge_file.pdf my_readable_file.pdf
+✅  Your file has been sanitized at my_readable_file.pdf
 ```
 
 ---
