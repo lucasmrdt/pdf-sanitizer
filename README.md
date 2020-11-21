@@ -19,21 +19,43 @@
 ## Installation
 
 ```bash
-git clone https://github.com/lucasmrdt/sanitized-pdf
-cd sanitized-pdf
-pip install -r requirements.txt --user
+git clone https://github.com/lucasmrdt/pdf-sanitizer
+cd pdf-sanitizer
+pip3 install -r requirements.txt --user
 ```
 
 ## Usage
 
 ```bash
-> ./sanitized-pdf input_file.pdf output_file.pdf
+> ./pdf-sanitizer -h
+usage: pdf-sanitizer [-h] [--title-ratio TITLE_RATIO]
+                     [--content-ratio CONTENT_RATIO]
+                     input_file output_file
+
+Quickly remove useless page from a huge pdf to get a readable pdf
+
+positional arguments:
+  input_file            pdf file to be sanitized
+  output_file           output sanitized pdf file name
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --title-ratio TITLE_RATIO
+                        float between [0, 1] which is responsible of detecting
+                        similar pages from title. The higher the ratio, the
+                        more sensitive the sanitizer will be to any changes.
+                        (default: 0.5)
+  --content-ratio CONTENT_RATIO
+                        float between [0, 1] which is responsible of detecting
+                        similar pages from content. The higher the ratio, the
+                        more sensitive the sanitizer will be to any changes.
+                        (default: 0.8)
 ```
 
 ## Example
 
 ```bash
-> ./sanitized-pdf my_huge_file.pdf my_readable_file.pdf
+> ./pdf-sanitizer my_huge_file.pdf my_readable_file.pdf
 ✅  Your file has been sanitized at my_readable_file.pdf
 ```
 
@@ -41,10 +63,9 @@ pip install -r requirements.txt --user
 
 ## Contributing
 
-- [x] Test on mac
 - [ ] Test on windows
 
-Fell free to add more usefull features, test it and report issues.
+Fell free to add more useful features, test it and report issues.
 
 ## Support
 
