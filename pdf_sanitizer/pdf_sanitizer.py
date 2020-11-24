@@ -34,7 +34,7 @@ def diff(content1: str, content2: str):
 
 def has_deleted_item(diff):
     for operation, *_ in diff.get_opcodes():
-        if operation == 'delete':
+        if operation == 'delete' or operation == 'replace':
             return True
     return False
 
